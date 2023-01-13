@@ -19,13 +19,13 @@ const AddEditPost = (props:AddEditProps) => {
   var month =['January','february','March','April','May','June','July','August','September','October','November','December']
   var navigate = useNavigate()
 
-  useEffect(()=>{
-    if(props.ediT.length>0){
-      if(titleRef.current==null){
-        // titleRef.current.value=
-      }
-    }
-  })
+  // useEffect(()=>{
+  //   if(props.ediT.length>0){
+  //     if(titleRef.current==null){
+  //       // titleRef.current.value=
+  //     }
+  //   }
+  // })
 
   const addHandler =()=>{
     var day = month[new Date().getMonth()]
