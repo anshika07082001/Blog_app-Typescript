@@ -46,9 +46,9 @@ const AddEditPost = (props:AddEditProps) => {
     }
   }
   const updHandler=(e:any)=>{
-    var day = month[new Date().getMonth()]
-    var date = `${new Date().getDate()} ${day} ${new Date().getFullYear()}`
-    console.log(document.querySelectorAll)
+    // var day = month[new Date().getMonth()]
+    // var date = `${new Date().getDate()} ${day} ${new Date().getFullYear()}`
+    // console.log(document.querySelectorAll)
   }
   const back=()=>{
     navigate('/')
