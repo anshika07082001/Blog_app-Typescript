@@ -10,6 +10,7 @@ type login = {
 
 type LProps={
     sigN:sign[]
+    setsign:React.Dispatch<React.SetStateAction<sign[]>>
     logiN:login[]
     setlogin:React.Dispatch<React.SetStateAction<login[]>>
 }
@@ -20,10 +21,13 @@ const LoginPage = (props:LProps) => {
     var pwdRef = useRef<HTMLInputElement>(null)
     var navigate = useNavigate()
 
+
     const loginHandler=()=>{
         if(nameRef.current!==null && emailRef.current!==null && pwdRef.current!==null){
-            props.sigN.map((item)=>{
-                if(nameRef.current?.value==item.name && emailRef.current?.value==item.email && pwdRef.current?.value==item.pwd){
+            for(var i=0 ;i<props.sigN.length;i++){
+                console.log(nameRef.current.value==props.sigN[i].name && emailRef.current.value==props.sigN[i].email && pwdRef.current.value==props.sigN[i].pwd)
+                console.log(nameRef.current.value,props.sigN[i].name ,emailRef.current.value,props.sigN[i].email , pwdRef.current.value,props.sigN[i].pwd)
+                if(nameRef.current.value==props.sigN[i].name && emailRef.current.value==props.sigN[i].email && pwdRef.current.value==props.sigN[i].pwd){
                     var obj ={name:nameRef.current.value,email:emailRef.current.value,pwd:pwdRef.current.value}
                     props.logiN.push(obj)
                     props.setlogin([...props.logiN])
@@ -34,10 +38,8 @@ const LoginPage = (props:LProps) => {
                     pwdRef.current.value=''
                     navigate('/')
                 }
-                else{
-                    alert('details not matched!!')
-                }
-            })
+            }
+            
         }
         else{
             alert('Fill All Details correctly')
