@@ -23,7 +23,6 @@
   width: 90%;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  /* grid-template-rows: repeat(,1fr); */
   gap: 0.5em;
   padding: 10px;
   margin: auto;

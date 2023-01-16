@@ -103,7 +103,7 @@ const SignUp = (props:signProps) => {
     return (
     <div className='col-12 signBg d-flex align-items-center' style={{height:'100vh'}}>
         <div className='col-4 d-flex flex-column border border-dark rounded ms-5'>
-            <h1 className='p-3 text-center'>Sign In</h1>
+            <h1 className='p-3 text-center'>Sign Up</h1>
             <span className='text-danger ps-3'>{msg}</span>
             <label className='ms-3'>Full Name</label>
             <input className='rounded border p-2 border-secondary border-1 ms-3 me-3' onChange={namehandler}  ref={nameRef}/>
@@ -118,7 +118,7 @@ const SignUp = (props:signProps) => {
             <label className='ms-3'>Confirm Password</label>
             <input className='rounded border p-2 border-secondary border-1 ms-3 me-3'  type='password' ref={cPwdRef} onChange={cPwdHandler}/>
             <Link to={'/login'} className='p-3 m-auto'>Login to Your Account</Link>
-            <button className='rounded border p-1 m-3 border-secondary border-1 mt-3 bg-warning fs-4' onClick={signHandler} >Sign In</button>
+            <button className='rounded border p-1 m-3 border-secondary border-1 mt-3 bg-warning fs-4' onClick={signHandler} >Sign Up</button>
         </div>
     </div>
     )
